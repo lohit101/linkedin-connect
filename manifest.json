@@ -1,0 +1,41 @@
+{
+    "manifest_version": 3,
+    "name": "SalesRobot - LinkedIn Connect",
+    "version": "0.1.0",
+    "description": "Automatically send LinkedIn connection requests with a limit and stop control.",
+    "permissions": [
+      "scripting",
+      "activeTab",
+      "tabs"
+    ],
+    "host_permissions": [
+      "https://www.linkedin.com/*"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "assets/img/logo.png",
+        "48": "assets/img/logo.png",
+        "128": "assets/img/logo.png"
+      }
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.linkedin.com/*"],
+        "js": ["assets/scripts/content.js"],
+        "css": ["assets/styles/popup.css"]
+      }
+    ],
+    "icons": {
+      "16": "assets/img/logo.png",
+      "48": "assets/img/logo.png",
+      "128": "assets/img/logo.png"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": ["assets/styles/popup.css"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
+  

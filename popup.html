@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light only">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rippleui@1.12.1/dist/css/styles.css" />
+    <link rel="stylesheet" href="./assets/styles/popup.css">
+    <title>SalesRobot - Linkedin Connect</title>
+</head>
+
+<body class="bg-black light">
+    <div class="bg-white/10 max-w-xl mx-auto text-center flex flex-col justify-between h-full">
+        <div class="flex flex-row gap-2 items-center h-20 border-b border-white/10 px-3 bg-black/20 shadow-md">
+            <img class="w-6"
+                src="https://cdn.prod.website-files.com/66028c3f31c8a5d0d6d10874/660b9dbb5ee5f2e4b46f74e7_Sales%20Robot%20Website%20Redesign%20icon.png"
+                alt="logo">
+            <h1 class="text-md font-medium text-white">SalesRobot</h1>
+        </div>
+
+        <div class="flex flex-col items-center justify-center p-4">
+            <div class="flex">
+                <div class="flex flex-col w-full items-center justify-center">
+                    <input style="width: 4rem;"
+                        class="bg-transparent text-6xl font-bold text-white border-transparent focus:border-transparent ring-0 focus:ring-0 outline-none focus:outline-none"
+                        type="number" name="reqNumber" id="reqNumber" min="0" max="100" placeholder="∞">
+                    <p class="text-white/20 font-medium">Leave blank to send maximum number of requests</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col justify-between w-full h-full">
+            <div id="loader" class="hidden mt-4 flex flex-row justify-center items-center gap-1">
+                <img class="w-6 opacity-70 animate-spin"
+                    src="data:image/png;base64,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"
+                    alt="iphone-spinner--v1">
+                <p id="counter" class="text-zinc-400">Sent: 0</p>
+            </div>
+
+            <div id="status" class="flex flex-row items-center gap-2 justify-center text-white/60 mt-4 px-4">
+                <div class="dot dot-success"></div>Service active
+            </div>
+
+            <div class="flex flex-col justify-end p-2 pt-4 border-t border-white/10 gap-2">
+                <button id="connect"
+                    class="flex items-center justify-center gap-1 bg-blue-500 py-2 w-full text-white text-xs font-medium rounded-md">
+                    <img class="w-3"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACcElEQVR4nO3dPU5VURTF8WuMsfGrszLRVm2cgIMQaC3trJ2CrYlGmYK1sfA5gTcAKKShAAuFCmPCS+RvbsJJSMAP4PHO2nuv3wDIOVm53PvWPfecYTAzMzMzMzOzZIAbwBvgK7ADrAJ3eo+rLOAjx+0Dr4BbvcdXCvCAv9sFXgBXe4+1BOAJ/+cLsARc6j3m1IAVTmcKPO497rTOEEgzGf/d9R5/OucIZDQ7fCK73XseaZwzkGYPeAlc6z2f8OYUSLMFPAMu955XWHMOpFkb/27vuYV0QYEcvfE/6j3HUC44kNEv4D1wt/dcQ1hAII2rGLFAGlcxYoE0m8BTVzE6gTSuYsQCaVzFiAUychUjFkhTt4oRDaRuFSMeSL0qJkggdaqYYIEcrWLuDRkFDCR3FRM4kJxVTIJAclUxiQLJUcUkDCR2FZM4kJhVTPJAmh9hqpgigcSpYooF0qzLVjFFA9GtYooHMjqQqmIciFgV40DEqhgH8kcbwLID0bzxX/cVomXVgWjZcSBaHIiYd75CdHxaaCnpx16xN5AO5Bj/MBTh6kSEy0Uhn12/a/ALKhF+hSu2yGFxJeFZJX/snXkZkFZt/nCIJuEVMvVSUg2bXmytYdefI2jYl1glMm8B7yEHUuuoigcykas6igayLrsWt1ggW/Kr1YsEshfme47kgczCVR2JA5mE/CYwYSDT0FXHvHmLPzHeBFOMt4kV442UxXircTHejF+Mj6sQ4wNdxPjIIzE+FEyMj80T44MlxQD3/1H+fQOeA1d6j7UM4MMJQfw8fEl0s/f4yhkXIQOvgW3gO/DWx3ebmZmZmZmZ2RDeb0UYHwU1RYFNAAAAAElFTkSuQmCC"
+                        alt="play--v1">
+                    <p>Start Connecting</p>
+                </button>
+
+                <button id="stop"
+                    class="hidden flex items-center justify-center gap-1 bg-red-500 py-2 w-full text-white text-xs font-medium rounded-md"
+                    disabled>
+                    <img class="w-3"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABU0lEQVR4nO3cy00DQBCDYVMPD1EhEW3waC2hjUSJfrTScuHGBXnX/joYrWa8J0tVVVVVVVVVVVVVVVVVVVX174An4BP4Ai6s6zJn+AAetRrgDngFbuznBhzGjFrFfIzdHbTQmdpxM34bMz7L3cyMFO9yN8MvxVHuFv9N/dVZ7ggjd4SRO8LIHWHkjjByRxi5I4zcEUbuCCN3hJE7wsgdYeSOMHJHGLkjjNwRRu4II3eEkTvCyB1h5I4wckcYuSOM3BFG7ggjd4SRO8LIHWHkjjByRxi5I4zcEUbuCCN3hJE7wsgdYeSOMHJHGLkjjNwRRu4II3eEkTvCyB1h5I4wckcYuWs9kxngRI6j3M0q1RRvcjd6bYEr+7sC91rB7LXd3YsWK1I+bLop1/EYSxUp/wAeRpXqDPoz6zqPAB+ZscyZqqqqqqqqqqqqqqqqqqqq0l6+AZWPqGgwCJLvAAAAAElFTkSuQmCC"
+                        alt="stop">
+                    <p>Stop</p>
+                </button>
+
+                <p class="text-xs text-white/20">By: Lohit Chhabra</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./assets/scripts/popup.js"></script>
+</body>
+
+</html>
