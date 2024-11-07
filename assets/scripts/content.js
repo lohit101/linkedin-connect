@@ -32,9 +32,14 @@ async function sendConnectionRequests() {
 
         // handle confirmation dialog (if it appears)
         setTimeout(() => {
+            const noteButton = document.querySelector('button[aria-label="Send without a note"]');
             const confirmButton = document.querySelector('button[aria-label="Send now"]');
+            
             if (confirmButton) {
                 confirmButton.click();
+            }
+            if (noteButton) {
+                noteButton.click();
             }
         }, 500);
 
