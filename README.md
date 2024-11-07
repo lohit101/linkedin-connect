@@ -15,7 +15,8 @@
 
 ## Directory Structure
 
-```salesrobot-linkedinconnect/
+```
+salesrobot-linkedinconnect/
 ├── manifest.json
 ├── popup.html
 ├── assets/
@@ -25,7 +26,8 @@
 │   ├── styles/
 │   │   ├── popup.css
 │   ├── img/
-│   │   ├── logo.png```
+│   │   ├── logo.png
+```
 
 ---
 
