@@ -1,12 +1,12 @@
 # SalesRobot - LinkedIn Connect
 
-**LinkedIn Connect** is a Chrome extension that automates sending connection requests to people listed on a LinkedIn page. It allows you to specify the maximum number of connection requests to send and provides the ability to stop the process at any time. It makes sure that the connection requests are sent every 5 seconds so your account does not get suspended.
+**LinkedIn Connect** is a Chrome extension that automates sending connection requests to people listed on a LinkedIn page. It allows you to specify the maximum number of connection requests to send and provides the ability to stop the process at any time. It makes sure that the connection requests are sent every 5-10 seconds so your account does not get suspended.
 
 ### Features
 
 - **Automated Requests**: Send connection requests to all visible users on a LinkedIn search or list page.
 - **Request Limit**: Specify the number of requests you want to send in one session.
-- **Request Interval**: Sends new connection request every 5 seconds to keep your linkedin account safe.
+- **Request Interval**: Sends new connection request every 5-10 seconds to keep your linkedin account safe.
 - **Stop Control**: A button to stop sending requests immediately if needed.
 - **Request Counter**: Displays a count of successfully sent requests in real-time.
 - **Loader Animation**: Shows a loading icon while the extension is sending requests.
@@ -66,7 +66,7 @@ salesrobot-linkedinconnect/
    - Enter a number (e.g., `10`) to limit the number of connection requests to that specific count. Leaving this field blank will send requests to all connectable users on the page.
 
 4. **Start Sending Requests**:
-   - Click the **Connect** button. The extension will begin sending connection requests to the listed people, one request every 5 seconds. 
+   - Click the **Connect** button. The extension will begin sending connection requests to the listed people, one request every 5-10 seconds. 
    - A loader icon will appear, and a counter will increment each time a request is sent.
 
 5. **Monitor Progress**:

@@ -34,7 +34,7 @@ async function sendConnectionRequests() {
         setTimeout(() => {
             const noteButton = document.querySelector('button[aria-label="Send without a note"]');
             const confirmButton = document.querySelector('button[aria-label="Send now"]');
-            
+
             if (confirmButton) {
                 confirmButton.click();
             }
@@ -55,7 +55,10 @@ async function sendConnectionRequests() {
             break;
         }
         await sendRequest(buttons[i]);
-        await new Promise(resolve => setTimeout(resolve, 5000)); // use of promise resolution instead of interval for optimized performance
+
+        // generate a random delay between 5-10 seconds
+        const randomDelay = Math.floor(Math.random() * (10000 - 5000 + 1)) + 5000;
+        await new Promise(resolve => setTimeout(resolve, randomDelay));
     }
 
     // return finished status to popup.js
