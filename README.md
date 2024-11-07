@@ -11,6 +11,14 @@
 - **Request Counter**: Displays a count of successfully sent requests in real-time.
 - **Loader Animation**: Shows a loading icon while the extension is sending requests.
 
+## Demo
+
+Here’s a preview of the extension in action:
+
+![SalesRobot - LinkedIn Connect in Action](assets/img/demo.gif)
+
+This GIF demonstrates the extension sending connection requests on LinkedIn automatically, following the specified request limit and interval settings.
+
 ---
 
 ## Directory Structure
